@@ -7,7 +7,8 @@ export default function EffectHookCounterOne() {
     useEffect(() => {
         console.log('useEffect - document title updated');
         document.title = `You clicked ${count} times`;
-    }, [count]); //useEffect has a second parameter, pass an array of the state that useEffect is conditional on to update on rerender
+    }, [count]); //useEffect has a second parameter, pass an array of the state that useEffect is dependent on to update on rerender
+    //be careful with the dependency array, don't forget to add the dependency that the effect needs to watch to update/pay attention to
 
     return (
         <div>
