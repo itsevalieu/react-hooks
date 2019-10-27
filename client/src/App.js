@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css';
-import ClassCounter from './components/ClassCounter';
-import HookCounter from './components/HookCounter';
-import HookCounterTwo from './components/HookCounterTwo';
-import HookCounterThree from './components/HookCounterThree';
-import HookCounterFour from './components/HookCounterFour';
+import ClassCounter from './components/UseStateExamples/ClassCounter';
+import HookCounter from './components/UseStateExamples/HookCounter';
+import HookCounterTwo from './components/UseStateExamples/HookCounterTwo';
+import HookCounterThree from './components/UseStateExamples/HookCounterThree';
+import HookCounterFour from './components/UseStateExamples/HookCounterFour';
 
 function App() {
   return (
