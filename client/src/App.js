@@ -9,6 +9,9 @@ import HookCounterFour from './components/UseStateExamples/HookCounterFour';
 // useEffect component examples
 import ClassCounterOne from './components/UseEffectExamples/ClassCounterOne';
 import EffectHookCounterOne from './components/UseEffectExamples/EffectHookCounterOne';
+import ClassMouse from './components/UseEffectExamples/ClassMouse';
+import HookMouse from './components/UseEffectExamples/HookMouse';
+
 
 function App() {
   return (
@@ -20,7 +23,9 @@ function App() {
       {/* <HookCounterFour /> */}
 
       {/* <ClassCounterOne /> */}
-      <EffectHookCounterOne />
+      {/* <EffectHookCounterOne /> */}
+      {/* <ClassMouse />*/}
+      <HookMouse />
 
     </div>
   );
