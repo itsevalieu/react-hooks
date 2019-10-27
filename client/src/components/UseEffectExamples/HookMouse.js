@@ -12,6 +12,13 @@ export default function HookMouse() {
     useEffect(() => {
         console.log('useEffect called');
         window.addEventListener('mousemove', logMousePosition);
+
+        return () => {
+            console.log("Component unmount");
+            window.removeEventListener('mousemove', logMousePosition);
+        }
+        //can return a function that will be executed when the component unmounts, aka cleanup function
+
     }, []) //setting an empty array tells the useEffect hook that this effect doesn't depend on any state or props, so no reason to call this effect on rerenders, only on initial render
     return (
         <div>
