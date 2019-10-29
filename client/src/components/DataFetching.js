@@ -5,6 +5,7 @@ export default function DataFetching() {
     const [posts, setPosts] = useState([]);
     const [post, setPost] = useState({});
     const [id, setId] = useState(1);
+    const [idFromButtonClick, setIdFromButtonClick] = useState(1);
 
     useEffect(() => {
         axios('https://jsonplaceholder.typicode.com/posts')
@@ -18,7 +19,7 @@ export default function DataFetching() {
     }, []);
 
     useEffect(() => {
-        axios(`https://jsonplaceholder.typicode.com/posts/${id}`)
+        axios(`https://jsonplaceholder.typicode.com/posts/${idFromButtonClick}`)
             .then(res => {
                 console.log(res.data);
                 setPost(res.data);
@@ -26,8 +27,11 @@ export default function DataFetching() {
             .catch(err => {
                 console.log(err);
             });
-    }, [id]);
+    }, [idFromButtonClick]);
 
+    const handleClick = () => {
+        setIdFromButtonClick(id);
+    }
     return (
         <div>
             <input
@@ -35,6 +39,7 @@ export default function DataFetching() {
                 value={id}
                 onChange={e => setId(e.target.value)}
             />
+            <button onClick={handleClick}>Fetch Post</button>
             <p>{post.title}</p>
             <ul>
                 {posts.map(post => <li key={post.id}>{post.title}</li>)}
