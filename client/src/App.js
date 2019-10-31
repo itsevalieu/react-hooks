@@ -16,8 +16,13 @@ import './App.css';
 // import MouseContainer from './components/UseEffectExamples/MouseContainer';
 // import IntervalHookCounter from './components/UseEffectExamples/IntervalHookCounter';
 // import IntervalClassCounter from './components/UseEffectExamples/IntervalClassCounter';
+// import DataFetching from './components/DataFetching';
 
-import DataFetching from './components/DataFetching';
+//useContext component examples
+import ComponentC from './components/UseContextExamples/ComponentC';
+
+export const UserContext = React.createContext();
+export const ChannelContext = React.createContext();
 
 function App() {
   return (
@@ -35,7 +40,12 @@ function App() {
       {/* <MouseContainer /> */}
       {/* <IntervalClassCounter /> */}
       {/* <IntervalHookCounter /> */}
-      <DataFetching />
+      {/* <DataFetching /> */}
+      <UserContext.Provider value={'Vishwas'}>
+        <ChannelContext.Provider value={'Codevolution'}>
+          <ComponentC />
+        </ChannelContext.Provider>
+      </UserContext.Provider>
     </div>
   );
 }
