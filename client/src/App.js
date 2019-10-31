@@ -19,10 +19,14 @@ import './App.css';
 // import DataFetching from './components/DataFetching';
 
 //useContext component examples
-import ComponentC from './components/UseContextExamples/ComponentC';
+// import ComponentC from './components/UseContextExamples/ComponentC';
 
-export const UserContext = React.createContext();
-export const ChannelContext = React.createContext();
+// export const UserContext = React.createContext();
+// export const ChannelContext = React.createContext();
+
+//useReducer component examples
+import CounterOne from './components/UseReducerExamples/CounterOne';
+import CounterTwo from './components/UseReducerExamples/CounterTwo';
 
 function App() {
   return (
@@ -41,11 +45,15 @@ function App() {
       {/* <IntervalClassCounter /> */}
       {/* <IntervalHookCounter /> */}
       {/* <DataFetching /> */}
-      <UserContext.Provider value={'Vishwas'}>
+
+      {/* <UserContext.Provider value={'Vishwas'}>
         <ChannelContext.Provider value={'Codevolution'}>
           <ComponentC />
         </ChannelContext.Provider>
-      </UserContext.Provider>
+      </UserContext.Provider> */}
+
+      {/* <CounterOne /> */}
+      <CounterTwo />
     </div>
   );
 }
